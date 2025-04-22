@@ -1,0 +1,58 @@
+# def distribute_numbers(numbers):
+#     odd_numbers = [num for num in numbers if num % 2 != 0]
+#     even_numbers = [num for num in numbers if num % 2 == 0]
+#     return odd_numbers, even_numbers
+# print("Enter 10 numbers:")
+# user_numbers = [int(input(f"Enter number {i+1}: ")) for i in range(10)]
+# odd_numbers, even_numbers = distribute_numbers(user_numbers)
+# print("\nEven numbers:", even_numbers)
+# print("Odd numbers:", odd_numbers)
+
+
+
+
+
+# def fun():
+#     print("This is the fun function!")
+
+# def disp():
+#     print("This is the disp function!")
+
+# def msg():
+#     print("This is the msg function!")
+# functions = [fun, disp, msg]
+# for function in functions:
+#     function()
+
+
+
+
+# list1 = [1, 2, 3, 4, 5, 6]
+# list2 = [6, 5, 4, 3, 2, 1]
+# result = list(map(lambda x, y: x + y, list1, list2))
+# print(result)
+
+
+
+
+
+# import random
+# random_numbers = random.sample(range(-15, 16), 10)
+# squared_numbers = [num ** 2 for num in random_numbers]
+# print("Random Numbers:", random_numbers)
+# print("Squared Numbers:", squared_numbers)
+
+
+
+
+# lst = ['madam', 'Python', 'malayalam', 12321]
+# for item in lst:
+#     if isinstance(item, str) and item == item[::-1]:
+#         print(item)
+
+
+
+
+# faculty_names = ['Alice', 'Jonathan', 'Dr. Smith', 'Elizabeth', 'George', 'Michael', 'Alexander']
+# filtered_names = [name for name in faculty_names if len(name) > 8]
+# print(filtered_names)

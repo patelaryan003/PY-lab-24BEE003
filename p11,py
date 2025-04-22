@@ -1,0 +1,204 @@
+# import csv
+# data = [
+#     ["Name", "Age", "City"],
+#     ["John Doe", 29, "New York"],
+#     ["Jane Smith", 34, "Los Angeles"],
+#     ["Alice Johnson", 28, "Chicago"],
+#     ["Bob Brown", 41, "Houston"]
+# ]
+# filename = "sample_data.csv"
+# with open(filename, mode='w', newline='') as file:
+#     writer = csv.writer(file)
+#     writer.writerows(data)
+# print(f"{filename} has been created successfully!")
+
+
+
+# import csv
+# file_path = 'students_data.csv'  
+# students_dict = {}
+# with open(file_path, mode='r', newline='') as file:
+#     reader = csv.DictReader(file)
+#     for row in reader:
+#         rollno = row['RollNo']
+#         name = row['Name']
+#         subject1 = int(row['Subject1'])
+#         subject2 = int(row['Subject2'])  
+#         subject3 = int(row['Subject3'])  
+#         total = subject1 + subject2 + subject3 
+#         students_dict[rollno] = {
+#             'Name': name,
+#             'Subject1': subject1,
+#             'Subject2': subject2,
+#             'Subject3': subject3,
+#             'Total': total
+#         }
+# for rollno, student_info in students_dict.items():
+#     print(f"Roll No: {rollno}")
+#     for key, value in student_info.items():
+#         print(f"{key}: {value}")
+#     print("\n")
+
+
+
+
+
+# def create_vcard():
+#     full_name = input("Enter your full name: ")
+#     phone_number = input("Enter your phone number (e.g., +1234567890): ")
+#     email = input("Enter your email: ")
+#     address = input("Enter your address: ")
+#     vcard_data = f"""BEGIN:VCARD
+# VERSION:3.0
+# FN:{full_name}
+# TEL:{phone_number}
+# EMAIL:{email}
+# ADR:{address}
+# END:VCARD"""
+#     vcard_file = "contact.vcf"
+#     with open(vcard_file, "w") as file:
+#         file.write(vcard_data)
+#     print(f"vCard created successfully! You can now import it using the file: {vcard_file}")
+# create_vcard()
+
+
+
+
+
+
+# import os
+# import shutil
+# def create_subdirectory_and_copy_file(src_file, dest_subdirectory):
+#     if not os.path.exists(dest_subdirectory):
+#         os.makedirs(dest_subdirectory)
+#         print(f"Subdirectory '{dest_subdirectory}' created successfully!")
+#     else:
+#         print(f"Subdirectory '{dest_subdirectory}' already exists.")
+#     if os.path.exists(src_file):
+#         dest_file = os.path.join(dest_subdirectory, file_name)
+#         shutil.copy(src_file, dest_file)
+#         print(f"File '{src_file}' copied to '{dest_file}' successfully!")
+#     else:
+#         print(f"Source file '{src_file}' does not exist.")
+# src_file = "subdir1/example.txt"  
+# dest_subdirectory = "subdir2"    
+# create_subdirectory_and_copy_file(src_file, dest_subdirectory)
+
+
+
+
+
+
+
+
+# def copy_and_convert_to_uppercase(src_file, dest_file):
+#     try:
+#         with open(src_file, 'r') as source:
+#             content = source.read()
+#         content_uppercase = content.upper()
+#         with open(dest_file, 'w') as destination:
+#             destination.write(content_uppercase)
+#         print(f"Contents of '{src_file}' have been copied to '{dest_file}' with uppercase conversion.")
+#     except FileNotFoundError:
+#         print(f"The source file '{src_file}' does not exist.")
+#     except IOError as e:
+#         print(f"An error occurred: {e}")
+# src_file = 'source.txt' 
+# dest_file = 'destination.txt'  
+# copy_and_convert_to_uppercase(src_file, dest_file)
+
+
+
+
+
+
+# def merge_files_alternatively(file1, file2, output_file):
+#     try:
+#         with open(file1, 'r') as f1, open(file2, 'r') as f2, open(output_file, 'w') as out:
+#             lines1 = f1.readlines()
+#             lines2 = f2.readlines()
+#             max_lines = max(len(lines1), len(lines2))
+#             for i in range(max_lines):
+#                 if i < len(lines1):
+#                     out.write(lines1[i]) 
+#                 if i < len(lines2):
+#                     out.write(lines2[i]) 
+#         print(f"Lines from '{file1}' and '{file2}' have been merged into '{output_file}'.")
+#     except FileNotFoundError:
+#         print("One of the input files does not exist.")
+#     except IOError as e:
+#         print(f"An error occurred: {e}")
+# file1 = 'file1.txt' 
+# file2 = 'file2.txt'  
+# output_file = 'merged_output.txt'  
+# merge_files_alternatively(file1, file2, output_file)
+
+
+
+
+
+
+
+# import pickle
+# from datetime import datetime
+# class Employee:
+#     def __init__(self, empcode, empname, doj, salary):
+#         self.empcode = empcode
+#         self.empname = empname
+#         self.doj = doj  
+#         self.salary = salary
+#     def __str__(self):
+#         return f"Employee Code: {self.empcode}, Name: {self.empname}, Date of Joining: {self.doj}, Salary: {self.salary}"
+# def serialize_employee(employee, filename):
+#     try:
+#         with open(filename, 'wb') as file:
+#             pickle.dump(employee, file)
+#         print(f"Employee data serialized and saved to {filename}")
+#     except IOError as e:
+#         print(f"Error while saving the employee data: {e}")
+# def deserialize_employee(filename):
+#     try:
+#         with open(filename, 'rb') as file:
+#             employee = pickle.load(file)
+#         return employee
+#     except IOError as e:
+#         print(f"Error while reading the employee data: {e}")
+#         return None
+# emp = Employee(empcode=101, empname="John Doe", doj="2022-01-15", salary=55000)
+# serialize_employee(emp, "employee_data.pkl")
+# deserialized_emp = deserialize_employee("employee_data.pkl")
+# if deserialized_emp:
+#     print("Deserialized Employee Object:")
+#     print(deserialized_emp)
+
+
+
+
+
+
+# def remove_words_and_create_new_file(input_file, output_file):
+#     try:
+#         with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:                                                                                                                                                                                                                                    
+#             words_to_remove = ['a', 'the', 'an']
+#             content = infile.read()
+#             for word in words_to_remove:
+#                 content = content.replace(f' {word} ', ' ')
+#                 content = content.replace(f' {word}.', '.')
+#                 content = content.replace(f' {word},', ',')
+#                 if content.startswith(f'{word} '):
+#                     content = content.replace(f'{word} ', '', 1)
+#                 if content.endswith(f' {word}'):
+#                     content = content.rstrip(f' {word}')
+#             outfile.write(content)
+#         print(f"Processed content written to '{output_file}'")
+#     except FileNotFoundError:
+#         print(f"Error: The input file '{input_file}' was not found.")
+#     except IOError as e:
+#         print(f"An error occurred while processing the file: {e}")
+# input_file = 'input.txt'
+# output_file = 'output.txt'  
+# remove_words_and_create_new_file(input_file, output_file)
+
+
+
+
